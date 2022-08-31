@@ -81,6 +81,13 @@ nav{
     width: 100%;
     height: 100%;
 }
+.Carrello_Paypal{
+    width: 40px;
+    height: 30px;
+    margin-top: -10px;   
+    
+}
+
 
 
 .burger{
@@ -586,6 +593,54 @@ button a{
     
 
 
+    .Container_Titolo_Contattaci{
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap: 1.2rem;
+        align-items: center;
+        margin-top: 150px;
+    }
+    
+    .Container_Titolo_Contattaci::before,
+    .Container_Titolo_Contattaci::after {
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: #ff000063;
+    }
+    
+
+    .Container_Titolo_Contattaci h2{
+        color: #cda434;
+        font-size: 45px;
+        font-family: 'Crimson Text', serif;
+        font-weight: 400;
+        letter-spacing: 3px;
+        
+    }
+
+    .Contaienr_Contattaci{
+        width: 80%;
+        margin: 100px auto;
+        display: flex;
+        border: 3px solid #cda434;
+        border-radius: 22px;
+    }
+
+    iframe{
+        width: 70%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+
+    .Parte_Destra_Contattaci{
+        width: 30%;
+        background-color: #ff0000;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+  
 
 @media only screen and (max-width: 992px) {
    

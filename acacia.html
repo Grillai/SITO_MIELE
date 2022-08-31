@@ -5,11 +5,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Miele Belli</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./style_Pagina_Vasetto_Miele.css">
 </head>
 
 <body>
-    <h1>ACACIA</h1>
+    <nav>
+        <div class="logo"><a href="/index.html"><img src="./Logo.pn
+            " alt=""></a></div>
+        <ul class="nav-links">
+            <li> <a href="/index.html">HOME</a> </li>
+            <li> <a href="/index.html#Prodotti">PRODOTTI</a></li>
+            <li> <a href="#Storia">STORIA</a> </li>
+            <li> <a href="">CONTATTACI</a> </li>
+
+            <form class="Carrello_Paypal" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <!-- Identify your business so that you can collect the payments. -->
+                <input type="hidden" name="business" value="andrea.info19@gmail.com">
+
+                <!-- Specify a PayPal shopping cart View Cart button. -->
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="display" value="1">
+
+                <!-- Display the View Cart button. -->
+                <input type="image" name="submit" src="./toppng.com-shopping-cart-512x512.png" alt="Add to Cart"
+                    style="width:80%">
+                <img alt="" width=" 1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+            </form>
+
+        </ul>
+
+        <div class="burger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+    </nav>
+
+    <div class="Container_Articolo">
+
+        <div class="Container_Immaggine">
+            <img src="./5511.png" alt="">
+        </div>
+        <div class="Container_Titolo">
+            <h1>MIELE ACACIA</h1>
+        </div>
+        <div class="Container_Titolo_Valori">
+            <h1>Valori nutrizionali 100g : </h1>
+        </div>
+        <div class="Valori_Energetici">
+            <ul class="Valori">
+                <li>&nbsp;Energia: &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;1377Kj</li>
+                <li>Grassi:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0,0g </li>
+                <li>Carboidrati: &nbsp; &nbsp; &nbsp; &nbsp; 80,6g</li>
+                <li>&nbsp;Proteine:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0,04g</li>
+            </ul>
+        </div>
+        <form class="Paypal" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <!-- Identify your business so that you can collect the payments. -->
+            <input type="hidden" name="business" value="andrea.info19@gmail.com">
+
+            <!-- Specify an Add to Cart button. -->
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="add" value="1">
+
+            <!-- Specify details about the item that buyers will purchase. -->
+            <input type="hidden" name="item_name" value="Miele d'Acacia">
+            <input type="hidden" name="currency_code" value="EUR">
+
+            <!-- Provide a drop-down menu option field. -->
+
+
+            <!-- Provide a drop-down menu option field with prices. -->
+            <input type="hidden" name="on1" value="Size">
+            <label for="os1">
+                <h1 class="Quantità">Quantità</h1>
+            </label>
+            <select class="Scelta" name="os1" id="os1">
+                <option value="200g">200g - €2.00 EUR</option>
+                <option value="500g">500g - €4.95 EUR</option>
+                <option value="1kg">1kg - €5.95 EUR</option>
+            </select>
+
+            <!-- Specify the price that PayPal uses for each option. -->
+            <input type="hidden" name="option_index" value="1">
+            <input type="hidden" name="option_select0" value="200g">
+            <input type="hidden" name="option_amount0" value="2.00">
+            <input type="hidden" name="option_select1" value="500g">
+            <input type="hidden" name="option_amount1" value="4.95">
+            <input type="hidden" name="option_select2" value="1kg">
+            <input type="hidden" name="option_amount2" value="5.95">
+
+            <!-- Display the payment button. -->
+            <input type="image" name="submit" src="https://i.ibb.co/vkTTVLT/bottone.png" alt="Add to Cart">
+            <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+        </form>
+
+
+
+
+    </div>
+
+
+
 </body>
 
 </html>
