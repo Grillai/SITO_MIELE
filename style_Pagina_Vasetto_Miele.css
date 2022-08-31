@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
+
+
 html{
     
     scroll-behavior: smooth;
@@ -83,8 +85,39 @@ nav{
 }
 
 
+.burger{
+    width: 45px;
+    height: 45px;
+   
+    display: none;    
+}
+
+.burger div{
+    background-color: #cda434;
+    width: 29px;
+    height: 3px;
+    margin: 5px auto;   
+}
+
+.burger.active .bar{
+    transition: all 0.5s;
+}
+.burger.active .bar:nth-child(2){
+    opacity: 0;
+   
+ }
+ .burger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(225deg);
+    
+    
+ }
+ .burger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-225deg);
+ }
+
+
 .Container_Articolo{
-    max-width: 90%;
+    max-width: 80%;
     margin: 50px auto;
     height: 800px;
     background-color: aliceblue;
@@ -93,18 +126,22 @@ nav{
 }
 
 .Container_Immaggine{
-    
+    padding-left: 100px;
+    padding-top: 50px;
     width: 40%;
     height: 80%;
-    position: absolute;
-    top: 8%;
-    left: 4%;
+    transition: 0.3s;
 }
 
 .Container_Immaggine img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:contain;
+    
+}
+
+.Container_Immaggine:hover{
+    transform: scale(1.5);
 }
 
 
@@ -169,19 +206,24 @@ nav{
 }
 
 .Paypal{
-    width: 650px;
+    width: 50%;
     height: 180px;
-    padding: 1rem;
+    margin: 0 auto;
     position: absolute;
     top: 55.5%;
-    right: 6%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    right: 1%;
     text-align: center;
    
 }
 
+.Container_Quantità{
+    
+    width: 100%;
+    margin:0 auto;
+    
+    position: absolute;
+    top: -20%;
+}
 
 .Quantità {
     font-weight: 900;
@@ -194,15 +236,28 @@ nav{
 .Scelta ,option{
     
     width: 100%;
-    margin: 0px auto;
+    margin: 10px auto;
     width: 240px; 
     font-weight: 900;
     color: rgba(0, 0, 0);
-  
-    
+    border: 2px solid black;
 }
 
 
+
+.container_aggiungi{
+    
+    position: absolute;
+    margin: 50px auto;
+    position: absolute;
+    bottom: -40%;  
+    width: 101%;
+}
+
+.container_aggiungi input{
+    max-width: 80%;
+    height: 100%;    
+}
 
 .Carrello_Paypal{
     width: 40px;
@@ -211,3 +266,227 @@ nav{
     
 }
 
+.Container_Destra{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 992px) {
+   .Container_Articolo{
+    max-width: 98%;
+    height: 600px;
+   }
+
+  
+
+   .Container_Immaggine{
+    width: 50%;
+    padding-top: 50px;
+    padding-left: 0px;
+   }
+
+   .Container_Titolo h1{
+    font-size: 39px;
+    letter-spacing: 2px;
+}
+
+
+   .Container_Quantità{
+    
+    width: 100%;
+    margin:0 auto;  
+    position: absolute;
+    top: 0%;
+}
+
+
+.Quantità {
+    font-weight: 900;
+    margin: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px ;
+   
+}
+
+.Scelta ,option{
+    
+    width: 100%;
+    margin: 10px auto;
+    width: 200px; 
+    font-weight: 900;
+    color: rgba(0, 0, 0);
+    border: 2px solid black;
+}
+
+.container_aggiungi input{
+    height: 35px;
+    max-width: 94%;
+}
+
+.logo{
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 5%;
+    
+}
+
+
+.nav-links{
+    
+    width: 70%;
+   
+    
+}
+ 
+}
+
+
+@media only screen and (max-width: 768px) {
+body{
+    background-color: #000000;
+    max-height: 100%;
+    
+}
+
+.burger{
+    display: block;
+    position: absolute;
+    right: 9%;
+    top: 2%;
+    transition: 0.3s;
+}
+
+.nav-links{
+    position: absolute;
+    left: -119%;  
+    top: 50px;     
+    gap: 0;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cda434;
+    width: 100%;
+    height:70%;
+    transition: 0.3s;
+    z-index: 1;  
+    font-size: 25px;
+
+ }
+
+ .nav-links li {
+   margin: 10px 0px;
+   text-align: center;  
+          
+ }
+
+ .nav-links.active{
+    left: 0px;     
+  
+ 
+ }
+ .nav-links a{
+    color: #000000;
+    font-size: 25px;
+    letter-spacing: 4px;
+     
+ }
+
+
+
+    .Container_Articolo{
+        width: 90%;
+        height: 790px;
+        margin: 30px auto;
+        display: flex;
+        flex-direction:column;
+        
+    }
+
+    .Container_Immaggine{
+        width: 100%;
+        height: 40%;
+        margin: 0px auto;
+        padding: 0;
+        
+
+    }
+
+    .Container_Destra{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        text-align: center;
+    }
+
+    .Container_Titolo{
+        width: 100%;
+        top: 0%;
+        height: 14%;
+    }
+
+    .Container_Titolo h1{
+        width: 100%;
+    }
+
+    .Container_Titolo_Valori{
+        top: 15%;
+        
+    }
+    .Container_Titolo_Valori h1{
+        font-size: 20px;
+    }
+
+    .Valori_Energetici{
+        top: 22%;
+        
+    }
+
+    .Valori_Energetici h1{
+        font-size: 12px;
+    }
+    
+    .Container_Titolo_Valori{
+        width: 100%;
+    }
+
+    .Valori_Energetici{
+        width: 100%;
+    }
+
+    .Paypal{
+        width: 100%;
+        margin: 0px auto;
+        top: 44%;
+    }
+
+    .container_aggiungi {
+        max-width: 100%; 
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      
+    }
+
+    .container_aggiungi input{
+        height: 50px;
+        width: 100%;
+    }
+    
+    
+
+    .Scelta{
+        border: 1px solid black;
+        padding: 10px;
+        height: 50px;
+    }
+    .Container_Immaggine:hover{
+        transform: none;
+    }
+
+}
